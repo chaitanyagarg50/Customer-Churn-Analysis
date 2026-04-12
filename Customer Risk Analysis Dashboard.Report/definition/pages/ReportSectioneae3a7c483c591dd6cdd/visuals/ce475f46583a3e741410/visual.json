@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "ce475f46583a3e741410",
+  "position": {
+    "x": 53.333333333333329,
+    "y": 84.444444444444443,
+    "z": 2000,
+    "height": 635.55555555555554,
+    "width": 1164.4444444444443,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The customer churn rate last month was 27%, which means that out of 7043 customers, 1869 left the company.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The length of the contract and the tenure of the customer are key factors in predicting the churn behavior. Customers who have a monthly contract and a lower tenure are more likely to switch to other providers.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customers who do not have any dependents or partners are more prone to churn than those who do.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Gender does not seem to have a significant impact on the churn decision. However, senior citizens are less likely to churn than non-senior citizens.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customers who use Fibre Optic internet service have a higher churn rate than those who use other types of internet service. The payment method also influences the churn decision, with Electronic check being the most common among the churned customers.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customers who do not receive services such as Tech Support, Device Protection, and Online Security are more dissatisfied and tend to look for other options.",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

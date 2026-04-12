@@ -1,0 +1,19 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Churn"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Churn
+ref table DateTableTemplate_b1844d8d-ec6d-4ab4-9f17-533e7bbc81ef
+
+ref cultureInfo en-IN
+

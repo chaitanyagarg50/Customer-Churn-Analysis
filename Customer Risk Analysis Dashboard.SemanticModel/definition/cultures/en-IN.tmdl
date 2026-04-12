@@ -1,0 +1,284 @@
+cultureInfo en-IN
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "churn.gender": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "gender"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CHURNED CUSTOMERS BY GENDER": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.of_partner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% of partner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Partner": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.of_dependents": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% of Dependents"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dependents": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.tech_support": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Tech Support"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tech Support": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.streaming_tv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Streaming TV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Streaming TV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.streaming_movies": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Streaming Movies"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Streaming Movies": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.online_sec": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Online Sec"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Online Security": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.online_backup": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Online Backup"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Online Backup": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.device_protection": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Device Protection"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Device Protection": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.phone_service": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Phone Service"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Phone Service": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.yesmultiple_lines": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Yes-Multiple Lines"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Yes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.nomultiple_lines": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% No-Multiple Lines"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "churn.churn_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Churn",
+			          "ConceptualProperty": "% Churn Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Churn Rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

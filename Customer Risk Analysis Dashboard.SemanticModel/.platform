@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Customer Risk Analysis Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c2096fea-60cc-4f34-acdc-d064fa6b4c7c"
+  }
+}

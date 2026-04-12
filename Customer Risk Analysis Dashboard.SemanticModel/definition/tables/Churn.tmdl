@@ -1,0 +1,270 @@
+table Churn
+	lineageTag: e124c588-de88-4e30-a61a-eccf8f7370a9
+
+	measure 'Senior Citizen' = DIVIDE(CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[SeniorCitizen]=1,Churn[Churn]="Yes"), CALCULATE(COUNT(Churn[SeniorCitizen]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: b9831992-5d21-4d47-ab49-cd081b44bc16
+
+	measure '% of partner' = DIVIDE(CALCULATE(COUNT(Churn[Partner]),Churn[Partner]="Yes", Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Partner]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: d77a9943-0f3c-495f-884d-1950f6ae4139
+
+	measure '% of Dependents' = DIVIDE(CALCULATE(COUNT(Churn[Dependents]),Churn[Dependents]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[Dependents]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: e446ce13-1d6b-49fc-977f-0491aa5d7727
+
+	measure '% Tech Support' = DIVIDE(CALCULATE(COUNT(Churn[TechSupport]),Churn[TechSupport]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[TechSupport]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: 823abf13-389f-473a-96f4-f18f0bf5c44c
+
+	measure '% Streaming TV' = DIVIDE(CALCULATE(COUNT(Churn[StreamingTV]),Churn[StreamingTV]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[StreamingTV]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: 51cef366-a3ea-4e3b-a600-22ec47d83e96
+
+	measure '% Streaming Movies' = DIVIDE(CALCULATE(COUNT(Churn[StreamingMovies]),Churn[StreamingMovies]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[StreamingMovies]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: d925925e-dac0-4268-ad9a-07b4b2b73b6c
+
+	measure '% Phone Service' = DIVIDE(CALCULATE(COUNT(Churn[PhoneService]),Churn[PhoneService]="Yes",Churn[Churn]="Yes"), CALCULATE(COUNT(Churn[PhoneService]), Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: 2facfc88-9705-4c83-ab8b-bf7783da99ec
+
+	measure '% Online Sec' = DIVIDE(CALCULATE(COUNT(Churn[OnlineSecurity]),Churn[OnlineSecurity]="Yes", Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[OnlineSecurity]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: 3ae1353f-bd44-411f-b035-02070b9a78a0
+
+	measure '% Online Backup' = DIVIDE(CALCULATE(COUNT(Churn[OnlineBackup]),Churn[OnlineBackup]="Yes", Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[OnlineBackup]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: f5ee008e-5258-428c-bb04-5163ecc921e5
+
+	measure '% Device Protection' = DIVIDE(CALCULATE(COUNT(Churn[DeviceProtection]),Churn[DeviceProtection]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[DeviceProtection]),Churn[Churn]="Yes"),0)
+		formatString: 0%;-0%;0%
+		lineageTag: 427c5bfd-19e8-4fef-a865-f7e3396ff124
+
+	measure '% Yes-Multiple Lines' = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="Yes",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes", Churn[MultipleLines] <> "No Phone Service"),0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 58049415-3b35-4f2d-a7d0-d4550cb3318b
+
+	measure '% No-Multiple Lines' = DIVIDE(CALCULATE(COUNT(Churn[MultipleLines]),Churn[MultipleLines]="No",Churn[Churn]="Yes"),CALCULATE(COUNT(Churn[MultipleLines]),Churn[Churn]="Yes", Churn[MultipleLines] <> "No Phone Service"),0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d5fafd2f-b788-44c7-9f4e-24425d60028c
+
+	measure '% Churn Rate' = DIVIDE(CALCULATE(COUNT(Churn[Churn]),Churn[Churn]="Yes"),COUNT(Churn[Churn]),02)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 01ab6c87-9562-4001-b30c-72551ed5a619
+
+	column customerID
+		dataType: string
+		lineageTag: 5173f211-50e3-4550-83e4-0d259a7c3208
+		summarizeBy: none
+		sourceColumn: customerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 1e598882-ec9e-41f5-9569-edb238eeb12d
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = User
+
+	column SeniorCitizen
+		dataType: int64
+		formatString: 0
+		lineageTag: c7f0a49f-fe28-406e-84f4-c5f81c649a76
+		summarizeBy: sum
+		sourceColumn: SeniorCitizen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Partner
+		dataType: string
+		lineageTag: 2042f3ba-dd01-4f78-93aa-fd33c8450698
+		summarizeBy: none
+		sourceColumn: Partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dependents
+		dataType: string
+		lineageTag: 82564c3e-7a53-4c94-9f7e-2d61bfe9b9ab
+		summarizeBy: none
+		sourceColumn: Dependents
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure
+		dataType: int64
+		formatString: 0
+		lineageTag: 75f366f3-b31e-40ab-866d-4721bd65c3c9
+		summarizeBy: sum
+		sourceColumn: tenure
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneService
+		dataType: string
+		lineageTag: 09e06e75-b808-437e-a465-f5901dee466c
+		summarizeBy: none
+		sourceColumn: PhoneService
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultipleLines
+		dataType: string
+		lineageTag: f7f24ae2-3309-4fd7-9c40-e299830c2ef4
+		summarizeBy: none
+		sourceColumn: MultipleLines
+
+		annotation SummarizationSetBy = Automatic
+
+	column InternetService
+		dataType: string
+		lineageTag: 67fb4bc8-942b-42bd-b613-450f2baf038c
+		summarizeBy: none
+		sourceColumn: InternetService
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineSecurity
+		dataType: string
+		lineageTag: 0871a10d-a478-4ab4-86df-a46dc9a30888
+		summarizeBy: none
+		sourceColumn: OnlineSecurity
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineBackup
+		dataType: string
+		lineageTag: b426c14a-745c-4b0a-b5b2-22a580be027e
+		summarizeBy: none
+		sourceColumn: OnlineBackup
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeviceProtection
+		dataType: string
+		lineageTag: eef95a3d-e020-4ccb-99a6-37a11fdfb70c
+		summarizeBy: none
+		sourceColumn: DeviceProtection
+
+		annotation SummarizationSetBy = Automatic
+
+	column TechSupport
+		dataType: string
+		lineageTag: ed133a10-e417-4fbc-8e7b-076b80430037
+		summarizeBy: none
+		sourceColumn: TechSupport
+
+		annotation SummarizationSetBy = Automatic
+
+	column StreamingTV
+		dataType: string
+		lineageTag: 10254c9a-70df-4017-8c99-56833508f166
+		summarizeBy: none
+		sourceColumn: StreamingTV
+
+		annotation SummarizationSetBy = Automatic
+
+	column StreamingMovies
+		dataType: string
+		lineageTag: 630803fc-9ec6-44d0-be7e-3758f24c675e
+		summarizeBy: none
+		sourceColumn: StreamingMovies
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract
+		dataType: string
+		lineageTag: 6ff32096-e425-4537-9fdb-8a56a2c475a5
+		summarizeBy: none
+		sourceColumn: Contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaperlessBilling
+		dataType: string
+		lineageTag: da728445-72b9-4b8d-9771-c927835178b1
+		summarizeBy: none
+		sourceColumn: PaperlessBilling
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentMethod
+		dataType: string
+		lineageTag: 7f6733ea-4d04-4786-8411-a9a739951de6
+		summarizeBy: none
+		sourceColumn: PaymentMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyCharges
+		dataType: double
+		lineageTag: 792a9a7d-f04c-41f6-9dce-45e51462d0e4
+		summarizeBy: sum
+		sourceColumn: MonthlyCharges
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCharges
+		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: debc44e3-bd06-4f15-8bbd-d23b6a9da35f
+		summarizeBy: sum
+		sourceColumn: TotalCharges
+
+		annotation SummarizationSetBy = Automatic
+
+	column numAdminTickets
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e5e84ca-17a9-46ca-9dfd-48d15c285383
+		summarizeBy: sum
+		sourceColumn: numAdminTickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column numTechTickets
+		dataType: int64
+		formatString: 0
+		lineageTag: d7642534-f7da-41e6-9bdd-d7cc3bc883b4
+		summarizeBy: sum
+		sourceColumn: numTechTickets
+
+		annotation SummarizationSetBy = Automatic
+
+	column Churn
+		dataType: string
+		lineageTag: 2c4f3471-3673-4853-9496-eb7179e9efda
+		summarizeBy: none
+		sourceColumn: Churn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tenure(in years)'
+		dataType: string
+		lineageTag: b9f25034-9a0f-4a9d-84ce-8f55e62444ee
+		summarizeBy: none
+		sourceColumn: Tenure(in years)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Churn = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Maccha\Downloads\02 Churn-Dataset.xlsx"), null, true),
+				    #"01 Churn-Dataset_Sheet" = Source{[Item="01 Churn-Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"01 Churn-Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"customerID", type text}, {"gender", type text}, {"SeniorCitizen", Int64.Type}, {"Partner", type text}, {"Dependents", type text}, {"tenure", Int64.Type}, {"PhoneService", type text}, {"MultipleLines", type text}, {"InternetService", type text}, {"OnlineSecurity", type text}, {"OnlineBackup", type text}, {"DeviceProtection", type text}, {"TechSupport", type text}, {"StreamingTV", type text}, {"StreamingMovies", type text}, {"Contract", type text}, {"PaperlessBilling", type text}, {"PaymentMethod", type text}, {"MonthlyCharges", type number}, {"TotalCharges", type number}, {"numAdminTickets", Int64.Type}, {"numTechTickets", Int64.Type}, {"Churn", type text}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Tenure(in years)", each if [tenure] <= 12 then "<1 Year" else if [tenure] <= 24 then "<2 Year" else if [tenure] <= 36 then "<3 Year" else if [tenure] <= 48 then "<4 Year" else if [tenure] <= 60 then "<5 Year" else if [tenure] <= 72 then "<6 Year" else if [tenure] <= 84 then "<7 Year" else null)
+				in
+				    #"Added Conditional Column"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

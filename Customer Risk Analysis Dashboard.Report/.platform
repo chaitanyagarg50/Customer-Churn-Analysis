@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Customer Risk Analysis Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ff69c246-f466-4e34-9976-8b81837c6f58"
+  }
+}
