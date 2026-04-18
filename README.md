@@ -1,4 +1,5 @@
 KEY INSIGHTS
+
 The customer churn rate last month was 27%, which means that out of 7043 customers, 1869 left the company.
 
 The length of the contract and the tenure of the customer are key factors in predicting the churn behavior. Customers who have a monthly contract and a lower tenure are more likely to switch to other providers.
